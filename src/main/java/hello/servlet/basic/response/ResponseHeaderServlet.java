@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 @WebServlet(name = "responseHeaderServlet", urlPatterns = "/response-header")
-public class ResponbseHeaderServlet extends HttpServlet {
+public class ResponseHeaderServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // [status-line]
@@ -24,8 +24,8 @@ public class ResponbseHeaderServlet extends HttpServlet {
         response.setHeader("my-header","hello");
 
         //[Header 편의 메서드]
-        content(response);
-        cookie(response);
+//        content(response);
+//        cookie(response);
         redirect(response);
 
         PrintWriter writer = response.getWriter();

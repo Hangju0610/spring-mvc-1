@@ -1,10 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<%
-    MemberRepository memberRepository = MemberRepository.getInstance();
-    List<Member> members = memberRepository.findAll();
-%>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -25,6 +21,7 @@
             <td>${item.username}</td>
             <td>${item.age}</td>
         </tr>
+    </c:forEach>
     </tbody>
 </table>
 </body>
